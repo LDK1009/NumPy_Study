@@ -14,8 +14,8 @@ print(c)
 
 # 2차원 배열 2개 연결하기
 x = np.array([[1, 2], [3, 4]])
-y = np.array([[5, 6]])
-xy = np.concatenate((x, y), axis=0)
+y = np.array([[5, 6], [7,8]])
+xy = np.concatenate((x, y), axis=1)
 print(xy)
 
 
@@ -37,18 +37,3 @@ print(a2)
 # b = np.expand_dims(a, axis=1)
 # c = np.expand_dims(a, axis=0)
 
-
-# 1차원 배열에서 조건을 충족하는 값만 추출
-a = np.arange(5) # [0, 1, 2, 3, 4]
-b = a[a>2] # 3이상만 추출
-print(b)
-
-# 2차원 배열에서 조건을 충족하는 값만 추출
-a = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
-b = a[a>2]
-print(b) # 1차원 배열로 변환되는 것을 확인할 수 있다.
-
-# 조건문 활용(조건을 변수에 담아 대입하기)
-a = np.arange(10) # [0, 1, 2, 3, 4]
-two_five = (a >= 2) & (a<=5)
-print(a[two_five])
